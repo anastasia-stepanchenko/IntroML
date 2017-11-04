@@ -25,5 +25,5 @@ for i in range(len(pca.explained_variance_ratio_)):
 result = pca.transform(data)
 comp1 = result[:,0]
 
-print('Pearson corr of the 1st component and DJ index =', \
+print('Pearson corr between the 1st component and DJ index =', \
       numpy.corrcoef(comp1,dj)[0,1])

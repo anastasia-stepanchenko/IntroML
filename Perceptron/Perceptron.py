@@ -23,6 +23,7 @@ gen = sklearn.model_selection.KFold(n_splits=5, shuffle=True, random_state=42)
 accur = sklearn.model_selection.cross_val_score(clf, Xtest, ytest, cv=gen).mean()
 print('Accuracy before normalization =', accur)
 
+# normalize data
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)

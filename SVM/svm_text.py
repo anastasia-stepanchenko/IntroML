@@ -12,9 +12,11 @@ newsgroups = datasets.fetch_20newsgroups(
 X = newsgroups.data
 y = newsgroups.target
 
+# create ter-doc matrix
 vectorizer = TfidfVectorizer()
 td_matrix = vectorizer.fit_transform(X)
 
+# find the best parameter via grid
 grid = {'C': np.power(10.0, np.arange(-5, 6))}
 gen = sklearn.model_selection.KFold(n_splits=5, shuffle=True, random_state=241)
 clf = sklearn.svm.SVC(kernel='linear', random_state=241)

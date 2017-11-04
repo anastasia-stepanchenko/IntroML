@@ -8,6 +8,7 @@ y = boston.target
 
 gen = sklearn.model_selection.KFold(n_splits=5, shuffle=True, random_state=241)
 
+# calculate MSE
 def fMSE(par):
     clf  = sklearn.neighbors.KNeighborsRegressor(n_neighbors = 5, \
             metric = 'minkowski', p=par, weights='distance')
