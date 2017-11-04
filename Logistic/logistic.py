@@ -3,7 +3,7 @@ import os
 from sklearn.linear_model import LogisticRegression
 import sklearn
 
-cwd = os.chdir('D:\Programming\Python\IntroML\Logistic')
+os.chdir('D:\Programming\Python\IntroML\Logistic')
 #os.getcwd()
 
 data = pd.read_csv('data-logistic.csv',  header=None)

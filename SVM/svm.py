@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-cwd = os.chdir('D:\Programming\Python\IntroML\SVM')
+os.chdir('D:\Programming\Python\IntroML\SVM')
 #os.getcwd()
 
 data = pd.read_csv('svm-data.csv', header=None)

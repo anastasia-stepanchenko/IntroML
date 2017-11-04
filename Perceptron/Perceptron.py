@@ -3,7 +3,7 @@ get_ipython().magic('reset -sf')
 
 import pandas as pd
 import os
-cwd = os.chdir('D:\Programming\Python\IntroML\Perceptron')
+os.chdir('D:\Programming\Python\IntroML\Perceptron')
 #os.getcwd()
 
 datafit = pd.read_csv('perceptron-train.csv', header=None)

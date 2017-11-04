@@ -1,7 +1,7 @@
 # decision trees
 
 import os
-cwd   = os.chdir('D:\Programming\Python\IntroML\Titanic')
+os.chdir('D:\Programming\Python\IntroML\Titanic')
 
 import pandas as pd
 
@@ -35,16 +35,17 @@ graph
 
 
 # doesn't work
-graph=pyd.graph_from_dot_file('k.dot')
-graph.write_png("dtree.png")
+#import pydotplus as pyd
 
-dot_data = sk.tree.export_graphviz(a, out_file='k.dot') 
-import pydotplus as pyd
+#graph=pyd.graph_from_dot_file('k.dot')
+#graph.write_png("dtree.png")
 
-graph = pyd.graph_from_dot_data(dot_data)
+#dot_data = sk.tree.export_graphviz(a, out_file='k.dot') 
 
-graph.render('D:\Programming\Python\Titanic\kk.dot')
-graph.format = 'png'
+#graph = pyd.graph_from_dot_data(dot_data)
 
-from subprocess import check_call
-check_call(['dot','-Tpng','D:\Programming\Python\Titanic\k.dot','-o','D:\Programming\Python\Titanic\k.png'])
+#graph.render('D:\Programming\Python\Titanic\kk.dot')
+#graph.format = 'png'
+
+#from subprocess import check_call
+#check_call(['dot','-Tpng','D:\Programming\Python\Titanic\k.dot','-o','D:\Programming\Python\Titanic\k.png'])

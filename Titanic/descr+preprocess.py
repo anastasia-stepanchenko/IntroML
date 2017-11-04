@@ -2,7 +2,7 @@
 
 import pandas as pd
 import os
-cwd   = os.chdir('D:\Programming\Python\IntroML\Titanic')
+os.chdir('D:\Programming\Python\IntroML\Titanic')
 #os.getcwd()
 
 data = pd.read_csv('titanic.csv', sep = '\t', index_col='PassengerId')
