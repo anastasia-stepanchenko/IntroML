@@ -12,3 +12,4 @@
 10. [Quality metrics](QualityMetrics/quality.py)
 11. [PCA](PCA/pca.py)
 12. [Random Forest](RandomForest/rf.py)
+13. [Gradient Boosting](GradBoost/gradboost.py)

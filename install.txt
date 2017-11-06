@@ -1,3 +1,9 @@
 pip install pandas
 pip install sklearn
-pip install graphviz
+pip istall scipy
+
+# only for gradboost.py
+pip install matplotlib
+
+# only for decision_tree.py
+pip install graphviz 
