@@ -11,3 +11,4 @@
 9. [Logit](Logistic/logistic.py)
 10. [Quality metrics](QualityMetrics/quality.py)
 11. [PCA](PCA/pca.py)
+12. [Random Forest](RandomForest/rf.py)

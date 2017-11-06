@@ -1,15 +1,23 @@
-import pandas as pd
-import os
+# tested on Python 3.6.3
+# work dir must contain: salary-train.csv, salary-test-mini.csv
+# transforms texts to vectors and performs linear regression
+
+import pandas     # http://pandas.pydata.org/
+import os         # https://docs.python.org/3/library/os.html
+
+# http://scikit-learn.org/stable/modules/feature_extraction.html
 from sklearn.feature_extraction.text import TfidfVectorizer
-from scipy.sparse import hstack
 from sklearn.feature_extraction import DictVectorizer
-from sklearn.linear_model import Ridge
+from sklearn.linear_model import Ridge # http://scikit-learn.org/stable/
+from scipy.sparse import hstack        # https://www.scipy.org/
 
+# set cd
 os.chdir('D:\Programming\Python\IntroML\LinReg')
-raw_train = pd.read_csv('salary-train.csv')[0:10000]
-test  = pd.read_csv('salary-test-mini.csv')
 
-train = raw_train.copy()
+# load data from csv
+raw_train = pandas.read_csv('salary-train.csv')[0:10000]
+test      = pandas.read_csv('salary-test-mini.csv')
+train     = raw_train.copy()
 
 # change capitalized letters
 for i in range(len(train)):
@@ -28,7 +36,7 @@ vectorizer = TfidfVectorizer(min_df=5)
 tdidf = vectorizer.fit_transform(train.iloc[:,0])
 tdidf_test = vectorizer.transform(test.iloc[:,0])
 
-# empty to 'nan'
+# fill empties with 'nan'
 train['LocationNormalized'].fillna('nan', inplace=True)
 train['ContractTime'].fillna('nan', inplace=True)
 test['LocationNormalized'].fillna('nan', inplace=True)
@@ -41,11 +49,11 @@ X_train_categ = enc.fit_transform(train[['LocationNormalized', \
 X_test_categ = enc.transform(test[['LocationNormalized', \
                                    'ContractTime']].to_dict('records'))
 
-# merge variables
+# merge matrices
 X_train = hstack([tdidf, X_train_categ])
 X_test  = hstack([tdidf_test, X_test_categ])
 
-# ridge regression
+# fit ridge regression and make predictions for test data
 reg = Ridge(alpha=1,random_state=241)
 fitted = reg.fit(X_train, train['SalaryNormalized'])
 print('Predictions are', reg.predict(X_test))

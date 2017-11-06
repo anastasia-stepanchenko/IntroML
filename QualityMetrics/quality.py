@@ -1,9 +1,17 @@
-import pandas as pd
-import sklearn
-import os
-os.chdir('D:\Programming\Python\IntroML\QualityMetrics')
-data = pd.read_csv('classification.csv')
+# tested on Python 3.6.3
+# work dir must contain: classification.csv, scores.csv
+# computes different quality metrics
 
+import pandas           # http://pandas.pydata.org/
+import sklearn.metrics  # http://scikit-learn.org/stable/
+import os               # https://docs.python.org/3/library/os.html
+
+# set cd
+os.chdir('D:\Programming\Python\IntroML\QualityMetrics')
+# load data from csv
+data = pandas.read_csv('classification.csv')
+
+# calculate TP, TN, FP, FN
 TP = TN = FP = FN = 0
 for  i in range(len(data)):
     if data['true'][i] == 1: 
@@ -15,6 +23,7 @@ for  i in range(len(data)):
         
 print('TP =',TP,'\nTN =',TN,'\nFP =',FP,'\nFN =',FN)
 
+# calculate accur, precision, recall anf F1 metrics
 print('Accuracy =', sklearn.metrics.accuracy_score(data['true'],data['pred']))
 print('Precision =',sklearn.metrics.precision_score(data['true'],data['pred']))
 print('Recall  =',  sklearn.metrics.recall_score(data['true'],data['pred']))
@@ -23,11 +32,15 @@ print('F1 =',       sklearn.metrics.f1_score(data['true'],data['pred']))
 
 #___________________
 
-data2 = pd.read_csv('scores.csv')
+# load another data from csv
+data2 = pandas.read_csv('scores.csv')
+
+# calculate AUC-ROC
 roc = [sklearn.metrics.roc_auc_score(data['true'], \
                                      data2.iloc[:,x+1]) for x in range(4)]
 print('AUC-ROC for all the methods:', roc)
 
+# define scores with maximum precision if recall >= 0.7
 pr = [sklearn.metrics.precision_recall_curve(data['true'], \
                                     data2.iloc[:,x+1]) for x in range(4)]
 maxim = 0
