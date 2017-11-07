@@ -1,6 +1,6 @@
 # IntroML
 
-1. [Data description and preprocessing](DecisionTree/descr+preprocess.py)
+1. [Data description and preprocessing](DecisionTree/data_description.py)
 2. [Decision tree](DecisionTree/decision_tree.py)
 3. [kNeighbors](kNN/kneighbors.py)
 4. [Choice of metric for kNN](metric_choice.py)
