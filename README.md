@@ -13,3 +13,4 @@
 11. [PCA](PCA/pca.py)
 12. [Random Forest](RandomForest/rf.py)
 13. [Gradient Boosting](GradBoost/gradboost.py)
+14. [Image compression with kMeans[(kMeans/kmeans.py)
