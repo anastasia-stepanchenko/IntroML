@@ -11,7 +11,7 @@ import graphviz      # https://pypi.python.org/pypi/graphviz
 from sklearn.tree import DecisionTreeClassifier 
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\Titanic')
+os.chdir('D:\Programming\Python\IntroML\DecisionTree')
 
 # load data from csv, only leave certain attributes and drop NA 
 data = pandas.read_csv('titanic.csv', sep = '\t', index_col='PassengerId')
