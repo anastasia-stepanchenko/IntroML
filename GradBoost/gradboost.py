@@ -5,7 +5,7 @@
 
 import pandas        # http://pandas.pydata.org/
 import sklearn       # http://scikit-learn.org/stable/
-import os            # https://docs.python.org/3/library/os.html
+#import os            # https://docs.python.org/3/library/os.html
 import numpy         # http://www.numpy.org/
 import math          # https://docs.python.org/2/library/math.html
 import matplotlib.pyplot as plt  # https://matplotlib.org/api/pyplot_api.html
@@ -15,7 +15,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import RandomForestClassifier
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\GradBoost')
+#os.chdir('D:\Programming\Python\IntroML\GradBoost')
 # load data from csv
 data = pandas.read_csv('gbm-data.csv').values
 X = data[:,1:1777]
@@ -51,7 +51,7 @@ logloss_train  = [sklearn.metrics.log_loss(y_train, stage_train[i]) \
 logloss_test   = [sklearn.metrics.log_loss(y_test, stage_test[i]) \
                      for i in range(len(stage_test))]    
 
-# define the optimal number of iteration
+# define the optimal number of iterations
 optnum = numpy.argmin(logloss_test)+1
 print('optimal number of iterations =', optnum)
 print('min of logloss               =', min(logloss_test))

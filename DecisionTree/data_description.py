@@ -3,10 +3,10 @@
 # data description and preprocessing
 
 import pandas    # http://pandas.pydata.org/
-import os        # https://docs.python.org/3/library/os.html
+#import os        # https://docs.python.org/3/library/os.html
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\DecisionTree')
+#os.chdir('D:\Programming\Python\IntroML\DecisionTree')
 #os.getcwd()
 
 # load data from csv

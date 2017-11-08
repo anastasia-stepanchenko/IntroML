@@ -3,7 +3,7 @@
 # transforms texts to vectors and performs linear regression
 
 import pandas     # http://pandas.pydata.org/
-import os         # https://docs.python.org/3/library/os.html
+#import os         # https://docs.python.org/3/library/os.html
 
 # http://scikit-learn.org/stable/modules/feature_extraction.html
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -12,14 +12,16 @@ from sklearn.linear_model import Ridge # http://scikit-learn.org/stable/
 from scipy.sparse import hstack        # https://www.scipy.org/
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\LinReg')
+#os.chdir('D:\Programming\Python\IntroML\LinReg')
 
 # load data from csv
 raw_train = pandas.read_csv('salary-train.csv')[0:10000]
 test      = pandas.read_csv('salary-test-mini.csv')
 train     = raw_train.copy()
 
+
 # change capitalized letters
+pandas.options.mode.chained_assignment = None
 for i in range(len(train)):
     train['FullDescription'][i] = train['FullDescription'][i].lower()
 for i in range(2):

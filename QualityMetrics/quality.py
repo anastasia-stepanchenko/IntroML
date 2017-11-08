@@ -4,10 +4,10 @@
 
 import pandas           # http://pandas.pydata.org/
 import sklearn.metrics  # http://scikit-learn.org/stable/
-import os               # https://docs.python.org/3/library/os.html
+#import os               # https://docs.python.org/3/library/os.html
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\QualityMetrics')
+#os.chdir('D:\Programming\Python\IntroML\QualityMetrics')
 # load data from csv
 data = pandas.read_csv('classification.csv')
 
@@ -24,10 +24,10 @@ for  i in range(len(data)):
 print('TP =',TP,'\nTN =',TN,'\nFP =',FP,'\nFN =',FN)
 
 # calculate accur, precision, recall anf F1 metrics
-print('Accuracy =', sklearn.metrics.accuracy_score(data['true'],data['pred']))
-print('Precision =',sklearn.metrics.precision_score(data['true'],data['pred']))
-print('Recall  =',  sklearn.metrics.recall_score(data['true'],data['pred']))
-print('F1 =',       sklearn.metrics.f1_score(data['true'],data['pred']))
+print('Accuracy  =', round(sklearn.metrics.accuracy_score(data['true'],data['pred']),2))
+print('Precision =',round(sklearn.metrics.precision_score(data['true'],data['pred']),2))
+print('Recall    =',  round(sklearn.metrics.recall_score(data['true'],data['pred']),2))
+print('F1        =',       round(sklearn.metrics.f1_score(data['true'],data['pred']),2))
 
 
 #___________________

@@ -4,14 +4,14 @@
 
 import pandas        # http://pandas.pydata.org/
 import sklearn       # http://scikit-learn.org/stable/
-import os            # https://docs.python.org/3/library/os.html
+#import os            # https://docs.python.org/3/library/os.html
 
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import make_scorer
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\RandomForest')
+#os.chdir('D:\Programming\Python\IntroML\RandomForest')
 
 # load data from csv, only leave certain attributes and drop NA 
 data = pandas.read_csv('abalone.csv')

@@ -4,12 +4,12 @@
 
 import pandas     # http://pandas.pydata.org/
 import numpy      # http://www.numpy.org/
-import os         # https://docs.python.org/3/library/os.html
+#import os         # https://docs.python.org/3/library/os.html
 
 from sklearn.decomposition import PCA # http://scikit-learn.org/stable/
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\PCA')
+#os.chdir('D:\Programming\Python\IntroML\PCA')
 
 # load data from csv
 data = pandas.read_csv('close_prices.csv').iloc[:, 1:32]

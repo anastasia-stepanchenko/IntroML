@@ -4,10 +4,10 @@
 
 import pandas       # http://pandas.pydata.org/
 import sklearn.svm  # http://scikit-learn.org/stable/
-import os           # https://docs.python.org/3/library/os.html
+#import os           # https://docs.python.org/3/library/os.html
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\SVM')
+#os.chdir('D:\Programming\Python\IntroML\SVM')
 
 # load data from csv
 data = pandas.read_csv('svm-data.csv', header=None)

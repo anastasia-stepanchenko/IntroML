@@ -6,12 +6,12 @@ import numpy  as np
 import sklearn.cluster  # http://scikit-learn.org/stable/
 import skimage          # http://scikit-image.org/
 import skimage.io
-import os               # https://docs.python.org/3/library/os.html
+#import os               # https://docs.python.org/3/library/os.html
 import pylab            # https://scipy.github.io/old-wiki/pages/PyLab
 import math             # https://docs.python.org/2/library/math.html
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\kMeans')
+#os.chdir('D:\Programming\Python\IntroML\kMeans')
 
 # load image
 image   =  skimage.io.imread('parrots.jpg')
@@ -57,9 +57,9 @@ for i in range(dim[0]):
         k+=1
 
 # show resulting images
-pylab.imshow(skimage.img_as_ubyte(image_new_mean))
+pylab.imshow(image_new_mean)
 pylab.show()
-pylab.imshow(skimage.img_as_ubyte(image_new_medi))
+pylab.imshow(image_new_medi)
 pylab.show()
 
 # calculate mse for mean and median

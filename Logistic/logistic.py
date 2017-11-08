@@ -4,12 +4,12 @@
 
 import pandas       # http://pandas.pydata.org/
 import sklearn      # http://scikit-learn.org/stable/
-import os           # https://docs.python.org/3/library/os.html
+#import os           # https://docs.python.org/3/library/os.html
 
 from sklearn.linear_model import LogisticRegression
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\Logistic')
+#os.chdir('D:\Programming\Python\IntroML\Logistic')
 
 # load data from csv
 data = pandas.read_csv('data-logistic.csv',  header=None)

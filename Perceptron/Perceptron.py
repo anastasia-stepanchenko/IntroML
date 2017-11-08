@@ -5,13 +5,13 @@
 
 import pandas     # http://pandas.pydata.org/
 import sklearn    # http://scikit-learn.org/stable/
-import os         # https://docs.python.org/3/library/os.html
+#import os         # https://docs.python.org/3/library/os.html
 
 from sklearn.linear_model import Perceptron
 from sklearn.preprocessing import StandardScaler
 
 # set cd
-os.chdir('D:\Programming\Python\IntroML\Perceptron')
+#os.chdir('D:\Programming\Python\IntroML\Perceptron')
 
 # load data from csv
 datafit  = pandas.read_csv('perceptron-train.csv', header=None)
