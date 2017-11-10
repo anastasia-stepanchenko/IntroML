@@ -36,7 +36,7 @@ df   = df.set_index('Factors')
 sort = df.sort_values('Importance', ascending = False)
 print("Two most important factors:\n", sort[0:2])
 
-# visualize the tree (does't show the graph if run from command prompt yet)
-#dot_data = sklearn.tree.export_graphviz(fitted, out_file=None)
-#graph    = graphviz.Source(dot_data) 
-#graph
+# visualize the tree (saves the graph as pdf if run from command prompt)
+dot_data = sklearn.tree.export_graphviz(fitted, out_file=None)
+graph    = graphviz.Source(dot_data) 
+graph.render()

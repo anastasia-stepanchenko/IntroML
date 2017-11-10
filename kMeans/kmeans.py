@@ -63,17 +63,11 @@ pylab.imshow(image_new_medi)
 pylab.show()
 
 # calculate mse for mean and median
-dif_mean = imfloat - image_new_mean
-dif_medi = imfloat - image_new_medi
-mse_mean = 0
-mse_medi = 0
-for i in range(dim[0]):
-    for j in range(dim[1]):
-        mse_mean += sum(dif_mean[i,j]**2)
-        mse_medi += sum(dif_medi[i,j]**2)
+dif_mean  = imfloat - image_new_mean
+dif_medi  = imfloat - image_new_medi
 
-mse_mean /= dim[0]*dim[1]*3
-mse_medi /= dim[0]*dim[1]*3
+mse_mean  = np.sum(dif_mean**2)/(dim[0]*dim[1]*3)
+mse_medi  = np.sum(dif_medi**2)/(dim[0]*dim[1]*3)
 
 PSNR_mean = 20*math.log10(1) - 10*math.log10(mse_mean)
 PSNR_medi = 20*math.log10(1) - 10*math.log10(mse_medi)
