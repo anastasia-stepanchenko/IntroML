@@ -1,5 +1,6 @@
 # IntroML
 
+#### With scikit_learn
 1. [Data description and preprocessing](DecisionTree/data_description.py)
 2. [Decision tree](DecisionTree/decision_tree.py)
 3. [kNeighbors](kNN/kneighbors.py)
@@ -14,3 +15,6 @@
 12. [Random Forest](RandomForest/rf.py)
 13. [Gradient Boosting](GradBoost/gradboost.py)
 14. [Image compression with kMeans](kMeans/kmeans.py)
+
+#### With TensorFlow
+1. Logistic Regression ([py](TensorFlow/MSE_Logistic/MSE_logreg.py)), ([ipynb](TensorFlow/MSE_Logistic/MSE_logreg.ipynb))
