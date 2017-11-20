@@ -19,3 +19,4 @@
 #### With TensorFlow
 1. Logistic Regression ([py](TensorFlow/MSE_Logistic/MSE_logreg.py)), ([ipynb](TensorFlow/MSE_Logistic/MSE_logreg.ipynb))
 2. Multiclass Regression ([py](TensorFlow/MultiClassReg/softmax.py)), ([ipynb](TensorFlow/MultiClassReg/softmax.ipynb))
+3. 2-layer Neural Network ([py](TensorFlow/My1stNN/my1stNN.py)), ([ipynb](TensorFlow/My1stNN/my1stNN.ipynb))
