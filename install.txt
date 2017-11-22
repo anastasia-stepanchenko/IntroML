@@ -2,11 +2,17 @@ pip install pandas
 pip install sklearn
 pip istall scipy
 
-# only for gradboost.py
+# for gradboost.py
 pip install matplotlib
 
 # only for kmeans.py
 pip install scikit-image
 
 # only for decision_tree.py
-#pip install graphviz 
+pip install graphviz 
+
+
+# for tensorflow scripts
+pip install matplotlib
+pip install tensorflow
+pip install keras

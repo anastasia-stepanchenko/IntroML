@@ -112,8 +112,7 @@ prediction_validation = s.run(
     b: 1e-1})
 
 # Load the reference values for the predictions
-validation_true_values = np.loadtxt(
-        "D:\\Programming\\Python\\TensorFlow\\MSE_Logistic\\validation_predictons.txt"),
+validation_true_values = np.loadtxt("validation_predictons.txt"),
 print(prediction_validation.shape == (X.shape[0],),
       "Predictions must be a 1D array with length equal to the number of \
       examples in input_X")
