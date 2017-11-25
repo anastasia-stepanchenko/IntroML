@@ -4,28 +4,22 @@
 
 import tensorflow as tf
 import numpy as np
-#import os
+import os
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_auc_score
 
 
-#os.chdir("D:\Programming\Python\TensorFlow\My1stNN")
+os.chdir("D:\Programming\Python\TensorFlow\My1stNN")
 from preprocessed_mnist import load_dataset
 
-X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
-print("X and y train shape:", X_train.shape, y_train.shape)
-print("X and y test shape:", X_test.shape, y_test.shape)
-#print(X_val.shape, y_val.shape)
+X_train_flat, y_train, X_val_flat, y_val, X_test_flat, y_test = load_dataset(flatten=True)
+print("X and y train shape:", X_train_flat.shape, y_train.shape)
+print("X and y test shape:", X_test_flat.shape, y_test.shape)
 
 
 # # Logistic regression
 
 s = tf.Session()
-
-# Reshape features to flat format
-X_train_flat = s.run(tf.reshape(X_train, [X_train.shape[0],-1]))
-X_test_flat  = s.run(tf.reshape(X_test, [X_test.shape[0],-1]))
-X_val_flat   = s.run(tf.reshape(X_val, [X_val.shape[0],-1]))
 
 # Categorical labels to binaries
 y_train_oh = s.run(tf.one_hot(y_train, 10))
